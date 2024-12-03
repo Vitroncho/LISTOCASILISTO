@@ -147,7 +147,7 @@ header p {
 
 /* Enlaces de Redes Sociales */
 footer {
-    background-color: #333;
+    background-color: #799c81;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -477,6 +477,7 @@ footer a:hover {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
 .canasta-card:hover {
@@ -507,4 +508,94 @@ footer a:hover {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
+}
+
+
+
+
+
+/* Estilo para los botones de realizar pedido */
+.canasta-card .btn {
+    display: inline-block;
+    background-color: #799c81; /* Verde saludable */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+/* Efecto hover para el botón */
+.canasta-card .btn:hover {
+    background-color: #4e6b5a; /* Verde más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Ligero aumento de tamaño */
+    text-decoration: none; /* Asegura que no aparezcan subrayados */
+}
+
+
+/* Estilos específicos para la página de Gracias */
+.gracias-page {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.gracias-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.gracias-container h2 {
+    color: #28a745;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gracias-container p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.gracias-container .btn-primary, .gracias-container .btn-secondary {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.gracias-container .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.gracias-container .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.gracias-container .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.gracias-container .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+footer.gracias-footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Pedido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // Función para mostrar u ocultar los campos de tarjeta
+        function togglePaymentFields() {
+            var metodoPago = document.querySelector('input[name="metodo_pago"]:checked').value;
+            var tarjetaFields = document.getElementById("tarjeta-fields");
+            
+            if (metodoPago === "Tarjeta") {
+                tarjetaFields.style.display = "block";  // Mostrar campos de tarjeta
+            } else {
+                tarjetaFields.style.display = "none";   // Ocultar campos de tarjeta
+            }
+        }
+
+        // Ejecutar la función al cargar la página y cuando cambie la opción
+        window.onload = function() {
+            togglePaymentFields();
+        }
+    </script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="imagenes/logo-removebg-preview.png" alt="Logo" class="logo">
+                </div>
+                <div class="logo-text">Listo CasiListo</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="canastas.html">Canastas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Formulario para Realizar Pedido</h2>
+        <form action="gracias.html" method="POST"> <!-- Redirige a gracias.html -->
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" name="correo" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Número de Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="canasta" class="form-label">Selecciona la Canasta</label>
+                <select class="form-select" id="canasta" name="canasta" required>
+                    <option value="">Selecciona una canasta</option>
+                    <option value="canasta1">Ensalada Asiática de Quinoa y Gambas</option>
+                    <option value="canasta2">Ensalada de Langostino</option>
+                    <option value="canasta3">Ensalada de Pasta con Salmón Ahumado</option>
+                    <option value="canasta4">Ensalada de Arroz con Corazones de Alcachofa</option>
+                    <option value="canasta5">Piriñaca</option>
+                    <option value="canasta6">Ensalada de Arroz con Altramuces y Pepino</option>
+                    <option value="canasta7">Ensalada de Mejillones</option>
+                    <option value="canasta8">Ensalada de Garbanzos y Tallo de Brócoli con Cilantro y Limón</option>
+                    <option value="canasta9">Ensalada de Judías Verdes</option>                    
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="cantidad" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" value="1" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="metodo_pago" class="form-label">Método de Pago:</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="tarjeta" name="metodo_pago" value="Tarjeta" required onclick="togglePaymentFields()">
+                    <label class="form-check-label" for="tarjeta">Tarjeta</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="efectivo" name="metodo_pago" value="Efectivo" required onclick="togglePaymentFields()">
+                    <label class="form-check-label" for="efectivo">Efectivo</label>
+                </div>
+            </div>
+
+            <!-- Campos solo visibles si el método de pago es tarjeta -->
+            <div id="tarjeta-fields" style="display: none;">
+                <div class="mb-3">
+                    <label for="nombre_tarjeta" class="form-label">Nombre en la Tarjeta:</label>
+                    <input type="text" class="form-control" id="nombre_tarjeta" name="nombre_tarjeta" placeholder="Nombre completo">
+                </div>
+                <div class="mb-3">
+                    <label for="numero_tarjeta" class="form-label">Número de Tarjeta:</label>
+                    <input type="text" class="form-control" id="numero_tarjeta" name="numero_tarjeta" placeholder="#### #### #### ####">
+                </div>
+                <div class="mb-3">
+                    <label for="cvv" class="form-label">CVV:</label>
+                    <input type="text" class="form-control" id="cvv" name="cvv" placeholder="CVV">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección de Envío:</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" required>
+            </div>
+            
+            <button type="submit" class="btn btn-success">Realizar Pedido</button>
+        </form>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Listo CasiListo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
