@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header con Carrusel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="container d-flex justify-content-between align-items-center">
+<div class="logo-container">
+    <div class="logo">
+        <img src="imagenes/logo-removebg-preview.png" alt="Logo" class="logo"> <!-- Cambia "ruta/a/tu/logo.png" por la ruta correcta de tu logo -->
+    </div>
+    <div class="logo-text">Listo CasiListo</div>
+</div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="canastas.html">Canastas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="imagenes/banners/1.jpg"class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+            <img src="imagenes/banners/3.jpg" class="d-block w-100" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+            <img src="imagenes/banners/2.jpg" class="d-block w-100" alt="Imagen 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+    <header>
+        <h1>Bienvenidos a Listo CasiListo</h1>
+        <p>Comida saludable que nutre tu cuerpo y mente</p>
+    </header>
+
+
+    <section id="menu">
+        <h2>Recetas Destacadas</h2>
+        <div class="dish">
+            <img src="imagenes/Ensaladadearroz.jpg" alt="Plato 1">
+            <p>Ensalada de Arroz con corazones de alcachofa </p>
+        </div>
+        <div class="dish">
+            <img src="imagenes/Ensaladadejudias.jpg" alt="Plato 2">
+            <p>Ensalada de judiías verdes - Energizante y lleno de vitaminas</p>
+        </div>
+    </section>
+
+
+
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="imagenes/galeria/1024_682 (1).jpg" alt="Comida saludable 1">
+            </div>
+            <div class="gallery-item">
+                <img src="imagenes/galeria/1024_682 (2).jpg" alt="Comida saludable 2">
+            </div>
+            <div class="gallery-item">
+                <img src="imagenes/galeria/1024_682 (3).jpg" alt="Comida saludable 3">
+            </div>
+            <div class="gallery-item">
+                <img src="imagenes/galeria/1024_682 (4).jpg" alt="Comida saludable 4">
+            </div>
+            <div class="gallery-item">
+                <img src="imagenes/galeria/1024_682 (5).jpg" alt="Comida saludable 5">
+            </div>
+            <div class="gallery-item">
+                <img src="imagenes/galeria/1024_682.jpg" alt="Comida saludable 6">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>Testimonios</h2>
+        <div class="circle-container">
+            <div class="image-container">
+                <img src="imagenes/ensalada-de-quinoa.jpg" alt="Comida saludable en el centro">
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-item top">
+                    <p>"Este es el mejor sitio de comida saludable. Me encanta la frescura de los ingredientes y la variedad de platos."</p>
+                    <h4>Juan Pérez</h4>
+                    <p>Cliente Satisfecho</p>
+                </div>
+                <div class="testimonials-item right">
+                    <p>"Una experiencia única, la comida es deliciosa y saludable. ¡Lo recomiendo al 100%!"</p>
+                    <h4>Ana Gómez</h4>
+                    <p>Cliente Satisfecho</p>
+                </div>
+                <div class="testimonials-item bottom">
+                    <p>"Me siento mejor después de comer aquí, siempre me siento con más energía y en forma. ¡Gracias!"</p>
+                    <h4>Lucía Fernández</h4>
+                    <p>Cliente Satisfecho</p>
+                </div>
+                <div class="testimonials-item left">
+                    <p>"El servicio es excelente y siempre encuentro opciones saludables para mi dieta. ¡Muy recomendable!"</p>
+                    <h4>Carlos López</h4>
+                    <p>Cliente Satisfecho</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <a href="https://www.instagram.com/">Instagram</a> | <a href="https://www.facebook.com/">Facebook</a> | <a href="https://twitter.com/?lang=es">Twitter</a>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
